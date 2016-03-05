@@ -1,4 +1,4 @@
-var endTime = new Date(2016,2,4,17,0,0);
+var endTime = new Date(2016,2,5,17,0,0);
 var endTimeStamp = Date.parse(endTime);
 var timer = document.getElementById("countdown-wrapper");
 var weeks = document.getElementById("weeks");
@@ -25,35 +25,37 @@ function timeTillDoomsDay(){
 			days: days,
 			hours: hours,
 			minutes: minutes,
-			seconds: seconds
+			seconds: seconds,
+			timeDifference: timeDifference
 	};
-
-
-
-	if(timeDifference <= 0)	{
-		document.getElementById("countdown-wrapper").style.display = "none";
-		document.getElementById("kickoff-wrapper").style.display = "block";
-
-	}
-
+	console.log(timeObject);
 	return timeObject;
-
 }
+
+
 
 function initTimer(){
 	var timeObjectReturned = timeTillDoomsDay();
-
-	weeks.innerHTML = timeObjectReturned.weeks;
-	days.innerHTML = timeObjectReturned.days;
-	hours.innerHTML = timeObjectReturned.hours;
-	minutes.innerHTML = timeObjectReturned.minutes;
-	seconds.innerHTML = timeObjectReturned.seconds;
+		if(timeObjectReturned.timeDifference <= 0)	{
+			document.getElementById("countdown-wrapper").style.display = "none";
+			document.getElementById("kickoff-wrapper").style.display = "block";
+			clearInterval(timer);
+		}else	{
+			weeks.innerHTML = timeObjectReturned.weeks;
+			days.innerHTML = timeObjectReturned.days;
+			hours.innerHTML = timeObjectReturned.hours;
+			minutes.innerHTML = timeObjectReturned.minutes;
+			seconds.innerHTML = timeObjectReturned.seconds;
+	}
 }
 
 
+var timer = setInterval(initTimer, 500);
 
 
-setInterval(initTimer, 500);
+
+
+
 
 
 
