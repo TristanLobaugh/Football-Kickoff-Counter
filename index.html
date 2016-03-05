@@ -1,48 +1,53 @@
+
+<!-- Homework
+CSS Practice
+Make the memory game so that every div has a set position of absolute, except for the wrapper.
+
+CSS option
+1. Layout your timer so it looks like this: http://www.october212015.com/images/timecircuits.jpg
+2. Layout your dragon game so it looks like a card. I.e. http://orig01.deviantart.net/8eff/f/2012/161/b/8/trogdor__the_burninator_by_shinobigarth-d52xls2.png
+http://orig06.deviantart.net/25fa/f/2008/174/7/8/card_shine_dragon_by_rpd490.jpg
+Don't use these images... write CSS to get it close!
+
+JS options
+1. On page load, give the user a drop down or text field
+for each: year, month, day, and hour.
+2. Whatever the user puts in, count down from that.
+3. Give the user three choices of what they want to count down to. Each should be a button, and should run the program. I.e., enter your date info, choose a button:
+[kickoff classic] [zombie apocalypse] [Colonization of the moon]. As soon as the user clicks on the button, the timer starts, and the text reflects what they are counting down to.
+
+BONUS:
+4. Give a background that is unique to each of the three options.
+5. Give the user the option of choosing all 3 counters. In this case, the timers should each take up 33% of the screen and have a unique background.
+
+SUPER BONUS:
+6. Give the user the option to pause the timer. Consider the JS method "clearInterval"
+7. If the user chose one option, have the other options count in the background anyway. If one of them goes off before the chosen one does, alert the user. I.e., The kickoff classic just occured. Good luck as you wait for the zombie apoc!
+
+ULTRA BONUS:
+8. Move the counter from corner to corner, going clockwise, every 10 seconds. Consider using absolute positioning and updating the style.top/bottom and style.left/right whenver it is time to move the timer div.
+Use document.getElementById('user-year-field').value to 
+find the value of that input. -->
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>So Many Options Timer</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
 </head>
 <body>
-	
-	<h1>Countdown Until College Football Kickoff!</h1>
-	<h2>Kickoff Classic September 16, 2016</h2>
 
-	<div id="countdown-wrapper">
-		<div class="time-wrapper">
-			<div class="footballs"><img src="img/football.png"></div>
-			<div id="weeks"></div>
-			<div class="time-text">Weeks</div>
+	<div id="timer-window">
+		
+		<div id="drop-down">
+			drop down window goes here
+			
 		</div>
-		<div class="time-wrapper">
-			<div class="footballs"><img src="img/football.png"></div>
-			<div id="days"></div>
-			<div class="time-text">Days</div>
-		</div>
-		<div class="time-wrapper">
-			<div class="footballs"><img src="img/football.png"></div>
-			<div id="hours"></div>
-			<div class="time-text">Hours</div>
-		</div>
-		<div class="time-wrapper">
-			<div class="footballs"><img src="img/football.png"></div>
-			<div id="minutes"></div>
-			<div class="time-text">Minutes</div>
-		</div>
-		<div class="time-wrapper">
-			<div class="footballs"><img src="img/football.png"></div>
-			<div id="seconds"></div>
-			<div class="time-text">Seconds</div>
-		</div>
+
 	</div>
 
-	<div id="kickoff-wrapper">
-		Are you ready for some football!!!
-	</div>	
-
-	
 
 
 
@@ -74,6 +79,7 @@
 
 
 
-<script type="text/javascript" src="js/scripts.js"></script>
+
+	<script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
