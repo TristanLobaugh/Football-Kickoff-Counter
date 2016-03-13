@@ -1,4 +1,4 @@
-var endTime = new Date(2016,2,5,17,0,0);
+var endTime = new Date(2016,8,15,19,0,0);
 var endTimeStamp = Date.parse(endTime);
 var timer = document.getElementById("countdown-wrapper");
 var weeks = document.getElementById("weeks");
@@ -7,7 +7,7 @@ var hours = document.getElementById("hours");
 var minutes = document.getElementById("minutes");
 var seconds = document.getElementById("seconds");
 
-function timeTillDoomsDay(){	
+function timeTillKickoff(){	
 	// var now	= new Date();
 	// var nowTimestamp = Date.parse(now);
 	var nowTimestamp = Date.now();
@@ -35,7 +35,7 @@ function timeTillDoomsDay(){
 
 
 function initTimer(){
-	var timeObjectReturned = timeTillDoomsDay();
+	var timeObjectReturned = timeTillKickoff();
 		if(timeObjectReturned.timeDifference <= 0)	{
 			document.getElementById("countdown-wrapper").style.display = "none";
 			document.getElementById("kickoff-wrapper").style.display = "block";
